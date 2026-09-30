@@ -1,8 +1,6 @@
 # Monte Carlo Queue Simulation — How Many Cashiers Does a Shop Need?
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-charts-orange)
-![Topic](https://img.shields.io/badge/Topic-Simulation%20%26%20Queueing-green)
+
 
 A discrete-event **Monte Carlo simulation** of a shop checkout with a shared queue.
 It models random customer arrivals and service times over a 3-hour shift, measures how long
