@@ -11,7 +11,7 @@ cashiers needed to keep waiting times low.
 
 ---
 
-## 📌 The Problem
+##  The Problem
 
 A shop runs **2 cashiers** for a **180-minute** shift. Management wants to know:
 
@@ -88,7 +88,7 @@ Waiting time grows steadily through the shift, so waits are spread from 0 up to 
 
 <p align="center"><img src="staffing_chart.png" width="550"></p>
 
-## ✅ Conclusions
+##  Conclusions
 
 - **Two cashiers are heavily overloaded** (ρ = 2) — the average customer waits about 1.5 hours.
 - **A third cashier helps but is not enough** — ρ = 1.33 is still above 1, so the queue still grows.
