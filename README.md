@@ -1,4 +1,4 @@
-# 🛒 Monte Carlo Queue Simulation — How Many Cashiers Does a Shop Need?
+# Monte Carlo Queue Simulation — How Many Cashiers Does a Shop Need?
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-charts-orange)
@@ -19,7 +19,7 @@ A shop runs **2 cashiers** for a **180-minute** shift. Management wants to know:
 2. What happens when the arrival rate doubles during the last hour (peak hour)?
 3. How many cashiers are actually needed?
 
-## ⚙️ Model Assumptions
+##  Model Assumptions
 
 | Parameter | Value | Meaning |
 |---|---|---|
@@ -34,7 +34,7 @@ In queueing notation this is an **M/G/2** system.
 **Traffic intensity:** `ρ = λ / (c·μ) = 1 / (2 × 0.25) = 2`
 Since **ρ > 1**, customers arrive faster than two cashiers can serve them, so the queue keeps growing.
 
-## 🧠 How the Simulation Works
+##  How the Simulation Works
 
 1. **Generate arrivals** — add random exponential gaps to a clock until the shift ends; give each customer a random service time.
 2. **Serve customers in arrival order** — each customer goes to the cashier who becomes free first:
@@ -49,7 +49,7 @@ Since **ρ > 1**, customers arrive faster than two cashiers can serve them, so t
 5. **Peak-hour scenario** — compare customers arriving before vs during the peak.
 6. **Staffing analysis** — repeat the experiment for 2–6 cashiers.
 
-## 📊 Results
+##  Results
 
 *(seed = 42, so results are reproducible)*
 
@@ -95,7 +95,7 @@ Waiting time grows steadily through the shift, so waits are spread from 0 up to 
 - **Five cashiers** bring the system below capacity (ρ = 0.8) and cut the average wait to about **1 minute**.
 - The system is **highly sensitive to the arrival rate**: doubling arrivals in the peak hour more than triples waiting times, so extra staff are needed during busy periods.
 
-## ⚠️ Limitations & Future Improvements
+##  Limitations & Future Improvements
 
 - The "utilisation" figure is really **offered load** (it can exceed 1); true utilisation would measure busy time only.
 - Add **confidence intervals** (e.g. 95% CI for the mean wait) and use the sample standard deviation.
@@ -104,7 +104,7 @@ Waiting time grows steadily through the shift, so waits are spread from 0 up to 
 - Validate the model against **real shop data**.
 - Scale up with **NumPy** (speed), **SciPy** (statistics) or **SimPy** (discrete-event simulation).
 
-## 🚀 How to Run
+##  How to Run
 
 ```bash
 git clone https://github.com/<your-username>/monte-carlo-queue-simulation.git
@@ -115,7 +115,7 @@ python monte_carlo_simulation.py   # main simulation (Parts C, D, E + peak hour)
 python staffing_analysis.py        # compares 2–6 cashiers
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 monte-carlo-queue-simulation/
@@ -129,7 +129,7 @@ monte-carlo-queue-simulation/
 └── README.md
 ```
 
-## 🛠️ Technologies
+##  Technologies
 
 - **Python** — simulation logic
 - **random** — exponential & uniform random sampling
@@ -138,4 +138,4 @@ monte-carlo-queue-simulation/
 
 ---
 
-👤 **Author:** Noorie — University of Mauritius
+**Author:** Noorie — University of Mauritius
